@@ -4,10 +4,122 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300;400;500;700&display=swap" rel="stylesheet">
     <title>Pulse</title>
+    <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <script src="index.js"></script>
+<body> 
+    <section class="promo">
+        <div class="container">
+            <header class="header">
+                <a href="#" class="header__logo">
+                    <img src="icons/logo.png" alt="logo">
+                </a>
+                <div class="header__official">
+                    Официальный представитель
+                    <span>Garmin, Polar, Suunto</span>
+                </div>
+                <div class="header__contacts">
+                    <a href="tel:+74999228974" class="header__phone">+7 (499) 922-89-74</a>
+                    <button class="btn header__btn">заказать звонок</button>
+                </div>
+            </header>
+
+            <div class="promo__wrapper">
+                <h1 class="promo__title">Подбор пульсометра</h1>
+                <h2 class="promo__subtitle">с учётом Вашего уровня подготовки</h2>
+
+                <div class="promo__icons">
+                    <div class="promo__icon">
+                        <img src="icons/main-icons1.png" alt="timer">
+                        Время подбора:
+                        10 минут
+                    </div>
+                    <div class="promo__icon">
+                        <img src="icons/main-icons2.png" alt="delivery">
+                        Бесплатная
+                        доставка
+                    </div>
+                    <div class="promo__icon">
+                        <img src="icons/main-icons3.png" alt="questions">
+                        Ответим
+                        на все вопросы
+                    </div>
+                </div>
+
+                <button class="btn promo__btn">заказать консультацию</button>
+                <div class="promo__link">
+                    или
+                    <a href="#">перейти в каталог</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="advantages">
+        <div class="container">
+            <h2 class="section-title advantages__title">НАШИ ПРЕИМУЩЕСТВА</h2>
+            <div class="advantages__items">
+                <div class="advantages__item">
+                    <img src="icons/cup.png" alt="cup">
+                    <h3>Делимся опытом</h3>
+                    <p>Наши сотрудники всегда готовы поделиться своим опытом, так как сами бегают полумарафоны, переплыли Босфор, готовятся к соревнованиям по триатлону!</p>
+                </div>
+                <div class="advantages__item">
+                    <img src="icons/heart.png" alt="heart">
+                    <h3>Заботимся о здоровье</h3>
+                    <p>Мы работаем для того, чтобы Ваши занятия спортом шли на пользу Вашему здоровью и были в радость Вам и Вашим близким!
+                    </p>
+                </div>
+                <div class="advantages__item">
+                    <img src="icons/shoe.png" alt="shoe">
+                    <h3>Учим бегать</h3>
+                    <p>Помогаем с обучением правильной технике бега! Дружим с крупнейшей школой бега в России - <a href="#">I LOVE RUNNING.</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="consultation">
+        <div class="container">
+            <div class="section-title consultation__title">Получите бесплатную консультацию<br> по подбору пульсометра </div>
+            <div class="consultation__text">Просто заполните форму заявки<br> и мы перезвоним вам в течении 10 минут</div>
+
+            <form action="#" class="form">
+                <input name="name" required type="text" class="form__input" placeholder="Ваше имя">
+                <input name="phone" required type="tel" class="form__input" placeholder="Ваш телефон">
+                <input name="mail" required type="email" class="form__input" placeholder="Ваш E-mail">
+                <button class="btn form__btn">заказать консультацию</button>
+            </form>
+        </div>
+    </section>
+    <section class="carousel">
+        <div class="container">
+            <div class="carousel__wrapper">
+                <div><img src="img/slide1.jpg" alt="slide"></div>
+                <div><img src="img/slide2.jpg" alt="slide"></div>
+                <div><img src="img/slide3.jpg" alt="slide"></div>
+            </div>
+        </div>
+    </section>
+    <section class="catalog">
+        <div class="container">
+            <div class="section-title catalog__title">Каталог пульсометров</div>
+            <ul class="catalog__tabs">
+                <li class="catalog__tab">для фитнеса</li>
+                <li class="catalog__tab">для бега</li>
+                <li class="catalog__tab">для триатлона</li>
+            </ul>
+        </div>
+    </section>
+
+
+
+
+
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
