@@ -5,6 +5,34 @@ const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 const ghPages = require('gulp-gh-pages');
 
+gulp.task('sass', function () {
+    return gulp.src('./src/sass/*.sass')
+        .pipe(sass())
+        .pipe(gulp.dest('./dist/css'));
+});
+
+gulp.task('js', function() {
+    return gulp.src('./src/js/*.js')
+        .pipe(gulp.dest('./dist/js'));
+});
+
+gulp.task('html', function () {
+    return gulp.src('./src/*.html')
+        .pipe(gulp.dest('./dist'));
+});
+
+gulp.task('images', function () {
+    return gulp.src('./src/img/*')
+        .pipe(gulp.dest('./dist/img'));
+});
+
+gulp.task('icons', function () {
+    return gulp.src('./src/icons/*')
+        .pipe(gulp.dest('./dist/icons'));
+});
+
+gulp.task('build', gulp.series('sass', 'js', 'html', 'images', 'icons'));
+
 gulp.task('server', function() {
 
     browserSync({
