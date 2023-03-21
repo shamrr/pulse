@@ -3,6 +3,7 @@ const browserSync = require('browser-sync');
 const sass        = require('gulp-sass')(require('sass'));
 const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
+const ghPages = require('gulp-gh-pages');
 
 gulp.task('server', function() {
 
@@ -13,6 +14,11 @@ gulp.task('server', function() {
     });
 
     gulp.watch("src/*.html").on('change', browserSync.reload);
+});
+
+gulp.task('deploy', function() {
+    return gulp.src('./dist/**/*')
+        .pipe(ghPages());
 });
 
 gulp.task('styles', function() {
