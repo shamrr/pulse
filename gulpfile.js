@@ -11,6 +11,10 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('./dist/css'));
 });
 
+gulp.task('copy-slick-css', function () {
+    return gulp.src('./src/css/slick.css')
+        .pipe(gulp.dest('./dist/css'));
+});
 gulp.task('js', function() {
     return gulp.src('./src/js/*.js')
         .pipe(gulp.dest('./dist/js'));
@@ -31,7 +35,7 @@ gulp.task('icons', function () {
         .pipe(gulp.dest('./dist/icons'));
 });
 
-gulp.task('build', gulp.series('sass', 'js', 'html', 'images', 'icons'));
+gulp.task('build', gulp.series('sass', 'js', 'html', 'images', 'icons', 'copy-slick-css'));
 
 gulp.task('server', function() {
 
